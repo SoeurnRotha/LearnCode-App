@@ -46,6 +46,7 @@ class _thirdPageState extends State<thirdPage> {
   );
   get _buildRotate=>SingleChildScrollView(
     child: Container(
+      width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

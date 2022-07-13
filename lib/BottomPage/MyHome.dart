@@ -82,7 +82,7 @@ class _MyhomeState extends State<Myhome> {
   PhoneLoginHelper _loginHelper = PhoneLoginHelper();
   GoogleHelper _googleHelper = GoogleHelper();
   get _BuildDrawer => Drawer(
-    width: 350,
+    width: 310,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     child: ListView(
       children: [
@@ -128,7 +128,6 @@ class _MyhomeState extends State<Myhome> {
           onTap: () async{
             await _facebookHelper.logout();
             await _googleHelper.signOut();
-
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> MySignUpPage()));
           },
 
@@ -210,7 +209,7 @@ class _MyhomeState extends State<Myhome> {
           SizedBox(height: 20,),
           _video(),
           SizedBox(height: 20,),
-          _file(),
+          _filePDF(),
           SizedBox(height: 20,),
           _buildLoadding(),
         ],
@@ -273,7 +272,7 @@ class _MyhomeState extends State<Myhome> {
       },
     );
   }
-  _file(){
+  _filePDF(){
     return InkWell(
       child: Stack(
         alignment: Alignment.center,
@@ -297,7 +296,7 @@ class _MyhomeState extends State<Myhome> {
         ],
       ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> PageFile()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PageFile()));
       },
     );
   }

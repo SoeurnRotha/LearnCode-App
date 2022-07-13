@@ -14,122 +14,166 @@ class _PageAboutUsState extends State<PageAboutUs> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: _appbar,
-        body: _bodyPageAboutUs,
+        body: _body,
       ),
     );
   }
 
   get _appbar =>
       AppBar(
+        backgroundColor: Colors.grey,
         leading: IconButton(
-          icon: Icon(Icons.keyboard_return), onPressed: () {
+          icon: Icon(Icons.arrow_back), onPressed: () {
           Navigator.pop(context);
         },
         ),
         title: Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.only(right: 40),
-          child: Text("About US", style: TextStyle(fontFamily: "f1"),),
+          margin: EdgeInsets.only(right: 55),
+          child: Text("About us", style: TextStyle(fontFamily: "f1"),),
         ),
+        // centerTitle: true,
       );
-
-  get _bodyPageAboutUs => ListView(
+  get _body => SingleChildScrollView(
+      child: Container(
+      width: MediaQuery.of(context).size.width,
+    child: Column(
     children: [
-      Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 200,
-            // margin: EdgeInsets.only(left: 30),
-         // padding: EdgeInsets.all(30),
-              margin: EdgeInsets.all(10),
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("images/image lession/03.jpg"),
-                fit: BoxFit.cover
-              )
-            ),
-          ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            width: 300,
-            height: 150,
-            margin: EdgeInsets.only(left: 60,top: 30),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("images/intro/learnCode.png"),
-                fit: BoxFit.cover
-              )
-            ),
-          ),
-        ],
-      ),
-      Container(
-        width: double.infinity,
-        height: 200,
-        // alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(20)
+    SizedBox(height: 5,),
+    Container(
+      width: MediaQuery.of(context).size.width,
+      height: 200,
+    child: Image.asset("images/intro/newLogo.png")
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+      width: MediaQuery.of(context).size.width,
+      height: 200,
+      decoration: BoxDecoration(
+      color: Colors.grey[300],
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(20),
+      bottomLeft: Radius.circular(20),
+
+    ),
+    boxShadow: [
+    BoxShadow(
+    color: Colors.black,
+    blurRadius: 3,
+    spreadRadius: 2,
+    offset: Offset.zero,
+    blurStyle: BlurStyle.outer
+    )
+    ]
+    ),
+    child: Padding(
+    padding: const EdgeInsets.all(8.0),
+    child:
+    Center(child: Text("គោលបំណងក្នុងការបង្កើតកម្មវិធីនេះឡើងគឺដើម្បីចែករំលែកនៅចំណេះដឹងផ្នែកព័័ត៌មានវិទ្យា(Information Technology)ដែលពួកយើងមាន ដើម្បីជួយសម្រួលដល់សិស្សានុសិស្សដែលកំពុងសិក្សាឬមានបំណងចង់សិក្សាខាងផ្នែកព័ត៌មានវិទ្យានេះ។",style: TextStyle(fontFamily: "k1",fontSize: 15,fontWeight: FontWeight.bold),)
+    ),
+    ),
+    ),
+    ),
+    // SizedBox(height: 10,),
+    Text("កម្មវិធីមួយនេះបង្កើតឡើងដោយ៖",style: TextStyle(fontSize: 18,fontFamily: "k1",fontWeight: FontWeight.bold,decoration: TextDecoration.underline),),
+    SizedBox(height: 10,),
+    Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Container(
+    width: MediaQuery.of(context).size.width,
+    height: 80,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.only(
+    topRight: Radius.circular(20),
+    bottomLeft: Radius.circular(20),
+    ),
+      color: Colors.grey,
+      // gradient: LinearGradient(
+      //   begin: Alignment.topLeft,
+      //   end: Alignment.bottomRight,
+      //   colors: [Colors.purpleAccent,Colors.blue,Colors.amber,Colors.lightGreenAccent],
+      // ),
+      boxShadow: [
+        BoxShadow(
+            color: Colors.black,
+            blurRadius: 3,
+            spreadRadius: 2,
+            offset: Offset.zero,
+            blurStyle: BlurStyle.outer
+        )
+      ]
+  ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+            child: Text("Saro SereyVichea",style: TextStyle(fontFamily: "f1",fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)
         ),
-        child: Container(alignment: Alignment.center,margin: EdgeInsets.only(left: 20),child: Text("កម្មវិធីនេះមានគោលបំណងសម្រាប់ចែករំលែកនូវចំណេះដឹងទាក់ទងនិងការសរសេរកូដ (IT)  ដើម្បីជួយសម្រួលដល់និស្សិតដែលកំពង់សិក្សាជំនាញ (IT) ។",style: TextStyle(fontSize: 25,color: Colors.white),)),
-      ),
-      SizedBox(height: 20,),
-      Row(
-        children: [
-          Container(
-            width: 200,
-            height: 100,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
-                  image: AssetImage("images/chea.jpg"),
-                )
-            ),
-          ),
-          _contate("Mrr SARO SEREYVICHEA","+855 XXX XXX"),
-        ],
-      ),
-      SizedBox(height: 20,),
-      Row(
-        children: [
-          Container(
-            width: 200,
-            height: 100,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
-                  image: AssetImage("images/rotha.jpg"),
-                )
-            ),
-          ),
-          _contate("Mrr SOEURN ROTHA", "+855 XXX XXX")
-        ],
-      ),
-      SizedBox(height: 20,),
-      Container(
-        alignment: Alignment.center,
-        width: double.infinity,
-        height: 50,
-        decoration: BoxDecoration(
-          color: Colors.blue,
+        SizedBox(height: 10,),
+        Container(
+            child: Text("Soeurn Rotha",style: TextStyle(fontFamily: "f1",fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)
         ),
-        child: Text("Copyright by LEARNCODE",style: TextStyle(fontFamily: "s2",fontSize: 20,color: Colors.white),),
-      )
-    ],
+      ],
+    ),
+  ),
+  ),
+    SizedBox(height: 10,),
+    Text("អ្នកទាំងអស់គ្នាអាច Support ខ្ញំតាមរយះ",style: TextStyle(fontSize: 18,fontFamily: "k1",fontWeight: FontWeight.bold,decoration: TextDecoration.underline),),
+    SizedBox(height: 30,),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 80,
+          height: 80,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                  image: AssetImage("images/aba/aba.jpg"),
+                  fit: BoxFit.cover
+              )
+          ),
+        ),
+        SizedBox(width: 20,),
+        Text("002 167 474",style: TextStyle(fontWeight: FontWeight.bold,fontFamily: "f1",fontSize: 18),)
+      ],
+    ),
+    SizedBox(height: 30,),
+    Container(),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: 40,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              // bottomRight: Radius.circular(30),
+              // topLeft: Radius.circular(30),
+
+            ),
+            // gradient: LinearGradient(
+            //     begin: Alignment.topLeft,
+            //     end: Alignment.bottomRight,
+            //     colors: [Colors.purpleAccent,Colors.amber,Colors.lightGreenAccent,Colors.blue]
+            // ),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 3,
+                  spreadRadius: 2,
+                  offset: Offset.zero,
+                  blurStyle: BlurStyle.outer
+              )
+            ]
+        ),
+        child: Center(child: Text("Copyright by LearnCode",style: TextStyle(fontSize: 18,color: Colors.red,fontFamily: "f1"),)),
+      ),
+    )
+  ],
+  ),
+      ),
   );
-  _contate(String img,String phoneNumber){
-    return Container(
-      margin: EdgeInsets.only(right: 50),
-      child:Column(
-        children: [
-          Text(img,style: TextStyle(fontSize: 10 ,color: Colors.blue,fontFamily: "s2"),),
-          Text(phoneNumber,style: TextStyle(fontSize: 15,fontFamily: "s1",color: Colors.red),)
-        ],
-      ) ,
-    );
-  }
+
 
 }

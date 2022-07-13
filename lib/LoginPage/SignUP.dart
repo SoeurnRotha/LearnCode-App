@@ -50,11 +50,7 @@ class _MySignUpPageState extends State<MySignUpPage> {
     return Container(
       width: 200,
       height: 200,
-      // decoration: BoxDecoration(
-      //   image: DecorationImage(
-      //     image: AssetImage,
-      //   )
-      // ),
+
       child: Image.asset("images/intro/learnCode.png"),
     );
   }
