@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:learncode/BottomPage/MyHome.dart';
+import 'package:learncode/Page/Lession/C%20programming_lession.dart';
 import 'package:learncode/Page/Video/UI%20Designer%20Video/UI%20for%20C%20programming.dart';
-class MyExpression extends StatefulWidget {
-  const MyExpression({Key? key}) : super(key: key);
+class Mylesson extends StatefulWidget {
+  const Mylesson({Key? key}) : super(key: key);
 
   @override
-  _MyExpressionState createState() => _MyExpressionState();
+  _MylessonState createState() => _MylessonState();
 }
 
-class _MyExpressionState extends State<MyExpression> {
+class _MylessonState extends State<Mylesson> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Expression"),
+        title: Text("Lesson"),
         centerTitle: true,
         backgroundColor: Colors.grey,
         leading: IconButton(
@@ -32,10 +33,12 @@ class _MyExpressionState extends State<MyExpression> {
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
         child: ListView(
+
           children: [
             InkWell(
               child:   _buildItems("images/file/cpro.png", "C programming"),
               onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> pdfCprogramming())); //getstart Video c programming
               },
             ),
             InkWell(

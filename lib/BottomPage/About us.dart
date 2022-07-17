@@ -76,7 +76,7 @@ class _PageAboutUsState extends State<PageAboutUs> {
     ),
     ),
     // SizedBox(height: 10,),
-    Text("កម្មវិធីមួយនេះបង្កើតឡើងដោយ៖",style: TextStyle(fontSize: 18,fontFamily: "k1",fontWeight: FontWeight.bold,decoration: TextDecoration.underline),),
+    Text("កម្មវិធីមួយនេះបង្កើតឡើងដោយ៖",style: TextStyle(fontSize: 15,fontFamily: "k1",fontWeight: FontWeight.bold,decoration: TextDecoration.underline),),
     SizedBox(height: 10,),
     Padding(
     padding: const EdgeInsets.all(8.0),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learncode/BottomPage/MyHome.dart';
+import 'package:learncode/Page/Video/UI%20Designer%20Video/UI%20for%20C%20programming.dart';
+import 'package:learncode/Page/Video/Video_C%20programming/Getstart%20C%20programming.dart';
 class Myvideo extends StatefulWidget {
   const Myvideo({Key? key}) : super(key: key);
 
@@ -9,168 +12,105 @@ class Myvideo extends StatefulWidget {
 class _MyvideoState extends State<Myvideo> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: _videoAppbar,
-        body: _BuildBody,
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Video"),
+        centerTitle: true,
+        backgroundColor: Colors.grey,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> Myhome()));
+          },
+        ),
       ),
+      body: _buildBody,
     );
   }
-  get _videoAppbar=>AppBar(
-    backgroundColor: Colors.grey,
-    leading: IconButton(
-      icon: Icon(Icons.keyboard_return),onPressed: (){
-      Navigator.pop(context);
-    },
-    ),
-    title: Container(
-      margin: EdgeInsets.only(left: 100),
-        child: Text("Video")),
-  );
-  get _BuildBody => Container(
-    color: Colors.lightGreenAccent  ,
-    child: ListView(
-      children: [
-        SizedBox(height: 10,),
-        _C,
-        SizedBox(height: 10,),
-        _Cpp,
-        SizedBox(height: 10,),
-        _Cs,
-        SizedBox(height: 10,),
-        _java,
-        SizedBox(height: 10,),
-        _py,
-        SizedBox(height: 10,),
-        _html,
-        SizedBox(height: 10,),
-        _css,
-        SizedBox(height: 10,),
-        _js,
+  get _buildBody{
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.white,
+      width: MediaQuery.of(context).size.width,
+      child: ListView(
 
-      ],
-    ),
-  );
-  get _C => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        image: DecorationImage(
-          image: AssetImage("images/Programming/c.jpg"),
-        )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _Cpp => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/c++.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _Cs => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/c#.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _java => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/java.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _py => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/py.png"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _html => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/html.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _css => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/css.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
-  get _js => InkWell(
-    child: Container(
-      width: 360,
-      height: 220,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          image: DecorationImage(
-            image: AssetImage("images/Programming/js.jpg"),
-          )
-      ),
-    ),
-    onTap: (){
-      print("Hello");
-    },
-  );
+        children: [
+          InkWell(
+            child:   _buildItems("images/file/cpro.png", "C programming"),
+            onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> UICprogramming()));
+            },
+          ),
+          InkWell(
+            child:   _buildItems("images/file/C++.png", "C++ programming"),
+            onTap: (){
+
+            },
+          ),
+          InkWell(
+            child:   _buildItems("images/file/flutter.png", "Flutter"),
+            onTap: (){
+
+            },
+          ),
+          InkWell(
+            child:   _buildItems("images/file/py.png", "Python"),
+            onTap: (){
+
+            },
+          ),
+
+
+
+        ],
+      )
+    );
+  }
+   _buildItems(String image,String title){
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: 200,
+          color: Colors.grey[300],
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 25),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        child: Image.asset(image),
+
+                      ),
+                      SizedBox(width: 20,),
+                      Text(title,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,fontFamily: "f1"),)
+                    ],
+                  ),
+                ),
+
+                Container(
+                  height: 60,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.green[800],
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(15),
+                      bottomLeft: Radius.circular(15)
+                    ),
+                  ),
+                  child: Text("ចាប់ផ្ដើមសិក្សា",style: TextStyle(fontSize: 18,fontFamily: "k1",color: Colors.white,fontWeight: FontWeight.bold),),
+                )
+              ],
+            ),
+          ),
+        ),
+    );
+  }
 }

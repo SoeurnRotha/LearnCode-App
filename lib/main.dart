@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:learncode/BottomPage/Hidden%20drawer%20menu/Drawer_new_version.dart';
+
 import 'package:learncode/BottomPage/MyHome.dart';
 import 'package:learncode/Intro/firstPage.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +23,7 @@ class _LearnCodeState extends State<LearnCode> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myhome(),
+      home:_buildStreamBuilder,
       theme: ThemeData(primarySwatch: Colors.grey),
     );
   }

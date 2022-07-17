@@ -10,7 +10,7 @@ import 'package:learncode/Helper/PhoneNumber_helper.dart';
 import 'package:learncode/LoginPage/SignUP.dart';
 import 'package:learncode/Page/LoaddingError/Loadding_error.dart';
 import 'package:learncode/Page/PageExpression.dart';
-import 'package:learncode/Page/PageFile.dart';
+import 'package:learncode/Page/PageLesson.dart';
 import 'package:learncode/Page/PageVideo.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -25,6 +25,7 @@ class _MyhomeState extends State<Myhome> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
   }
   @override
   Widget build(BuildContext context) {
@@ -227,7 +228,7 @@ class _MyhomeState extends State<Myhome> {
          ],
         ),
       onTap: (){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyExpresstion()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyExpression()));
       },
     );
   }
@@ -283,7 +284,7 @@ class _MyhomeState extends State<Myhome> {
         ],
       ),
       onTap: (){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PageFile()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Mylesson()));
       },
     );
   }
@@ -383,7 +384,7 @@ class _MyhomeState extends State<Myhome> {
         ),
       ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MyExpresstion()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => MyExpression()));
       },
     );
   }
@@ -445,7 +446,7 @@ class _MyhomeState extends State<Myhome> {
         ),
       ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> PageFile()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> Mylesson()));
       },
     );
   }
