@@ -19,6 +19,7 @@ class _MyvideoState extends State<Myvideo> {
     );
   }
   get _videoAppbar=>AppBar(
+    backgroundColor: Colors.grey,
     leading: IconButton(
       icon: Icon(Icons.keyboard_return),onPressed: (){
       Navigator.pop(context);

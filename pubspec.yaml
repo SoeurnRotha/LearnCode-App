@@ -52,6 +52,9 @@ dependencies:
   http: ^0.13.4
   path_provider: ^2.0.11
 
+  #drawerbehavior:
+  hidden_drawer_menu: ^3.0.1
+
 #
 #  flutter_document_picker: ^4.0.0
 #  flutter_plugin_pdf_viewer: ^1.0.7
@@ -96,6 +99,8 @@ flutter:
      - images/intro/intro2.png
      - images/intro/learnCode.png
      - images/intro/newLogo.png
+     - images/intro/FB logo.png
+     - images/intro/YT logo.png
      - images/Login/fb.png
      - images/Login/google.png
      - images/Login/OTP.png
@@ -110,6 +115,8 @@ flutter:
      - images/silder/s1.jpg
      - images/silder/s2.jpg
      - images/silder/s3.jpg
+     - images/aba/aba logo.png
+     - images/error/error.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

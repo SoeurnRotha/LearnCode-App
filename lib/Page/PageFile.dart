@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learncode/BottomPage/MyHome.dart';
 import 'package:learncode/Page/Lession/C%20programming_lession.dart';
 class PageFile extends StatefulWidget {
   const PageFile({Key? key}) : super(key: key);
@@ -19,9 +20,15 @@ class _PageFileState extends State<PageFile> {
     );
   }
   get _fileAppbar => AppBar(
+    backgroundColor: Colors.grey,
     title: Container(
         child: Text("ឯកសារ")),
     centerTitle: true,
+    leading: IconButton(icon: Icon(Icons.arrow_back),
+    onPressed: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>Myhome()));
+    },
+    ),
   );
   get _BuildBody => Container(
     child: ListView(

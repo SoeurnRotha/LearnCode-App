@@ -8,6 +8,7 @@ import 'package:learncode/Helper/Facebook_helper.dart';
 import 'package:learncode/Helper/Google_helper.dart';
 import 'package:learncode/Helper/PhoneNumber_helper.dart';
 import 'package:learncode/LoginPage/SignUP.dart';
+import 'package:learncode/Page/LoaddingError/Loadding_error.dart';
 import 'package:learncode/Page/PageExpression.dart';
 import 'package:learncode/Page/PageFile.dart';
 import 'package:learncode/Page/PageVideo.dart';
@@ -56,11 +57,6 @@ class _MyhomeState extends State<Myhome> {
         },),label: "Home"
       ),
       BottomNavigationBarItem(
-          icon: InkWell(child: Icon(Icons.account_circle_rounded),onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));
-          },),label: "Profile"
-      ),
-      BottomNavigationBarItem(
           icon: InkWell(
               child: Icon(Icons.info),
           onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> PageAboutUs())
@@ -97,16 +93,7 @@ class _MyhomeState extends State<Myhome> {
           },
 
         ),
-        ListTile(
-          leading: Icon(Icons.account_circle),
-          style: ListTileStyle.list,
-          iconColor: Colors.black,
-          title: Text("Profile"),
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Myhome()));
-          },
 
-        ),
         ListTile(
           style: ListTileStyle.list,
           leading: Icon(Icons.info),
@@ -240,7 +227,7 @@ class _MyhomeState extends State<Myhome> {
          ],
         ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MyExpresstion()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyExpresstion()));
       },
     );
   }
@@ -268,7 +255,7 @@ class _MyhomeState extends State<Myhome> {
         ],
       ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Myvideo()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Myvideo()));
       },
     );
   }

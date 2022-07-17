@@ -110,7 +110,7 @@ class _PageAboutUsState extends State<PageAboutUs> {
         Container(
             child: Text("Saro SereyVichea",style: TextStyle(fontFamily: "f1",fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)
         ),
-        SizedBox(height: 10,),
+        SizedBox(height: 5,),
         Container(
             child: Text("Soeurn Rotha",style: TextStyle(fontFamily: "f1",fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),)
         ),
@@ -120,17 +120,17 @@ class _PageAboutUsState extends State<PageAboutUs> {
   ),
     SizedBox(height: 10,),
     Text("អ្នកទាំងអស់គ្នាអាច Support ខ្ញំតាមរយះ",style: TextStyle(fontSize: 18,fontFamily: "k1",fontWeight: FontWeight.bold,decoration: TextDecoration.underline),),
-    SizedBox(height: 30,),
+    // SizedBox(height: 30,),
     Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
+          margin: EdgeInsets.only(left: 20),
           width: 80,
           height: 80,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  image: AssetImage("images/aba/aba.jpg"),
+                  image: AssetImage("images/aba/aba logo.png"),
                   fit: BoxFit.cover
               )
           ),
@@ -138,6 +138,37 @@ class _PageAboutUsState extends State<PageAboutUs> {
         SizedBox(width: 20,),
         Text("002 167 474",style: TextStyle(fontWeight: FontWeight.bold,fontFamily: "f1",fontSize: 18),)
       ],
+    ),
+    Container(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                child: Image.asset("images/intro/FB logo.png"),
+                margin: EdgeInsets.only(left: 20),
+                width: 50,
+                height: 50,
+              ),
+              SizedBox(width: 20,),
+              Text("LearnCode រៀនកូដ"),
+            ],
+          ),
+          SizedBox(height: 20,),
+          Row(
+            children: [
+              Container(
+                child: Image.asset("images/intro/YT logo.png"),
+                margin: EdgeInsets.only(left: 20),
+                width: 50,
+                height: 50,
+              ),
+              SizedBox(width: 20,),
+              Text("LearnCode រៀនកូដ"),
+            ],
+          ),
+        ],
+      ),
     ),
     SizedBox(height: 30,),
     Container(),
