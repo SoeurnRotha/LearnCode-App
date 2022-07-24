@@ -23,7 +23,7 @@ class _LearnCodeState extends State<LearnCode> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:_buildStreamBuilder,
+      home:Myhome(),
       theme: ThemeData(primarySwatch: Colors.grey),
     );
   }

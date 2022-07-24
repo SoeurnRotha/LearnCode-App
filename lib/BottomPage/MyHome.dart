@@ -68,7 +68,7 @@ class _MyhomeState extends State<Myhome> {
     ],
   );
   get _BuildAppbar => AppBar(
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.grey[700],
     centerTitle: true,
     title: Container(
       // margin: EdgeInsets.only(left: 80),
@@ -134,6 +134,7 @@ class _MyhomeState extends State<Myhome> {
     ),
   );
   get _CrouselSlider => Container(
+    color: Colors.grey,
     width: MediaQuery.of(context).size.width,
     child: ListView(
       children:[
@@ -212,18 +213,18 @@ class _MyhomeState extends State<Myhome> {
           Container(
             alignment: Alignment.center,
             width: 350,
-            height: 200,
+            height: 150,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                  image: AssetImage("images/image lession/03.jpg"),
-                  fit: BoxFit.cover
-              ),
+              // image: DecorationImage(
+              //     image: AssetImage("images/image lession/03.jpg"),
+              //     fit: BoxFit.cover
+              // ),
             ),
           ),
            Container(
-             child: Text("លំហាត់",style: TextStyle(fontSize: 30,color: Colors.white,fontFamily: "f1"),),
+             child: Text("លំហាត់",style: TextStyle(fontSize: 30,color: Colors.black,fontFamily: "f1"),),
            )
          ],
         ),
