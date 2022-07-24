@@ -207,27 +207,28 @@ class _MyhomeState extends State<Myhome> {
   );
   _ex(){
     return InkWell(
-      child: Stack(
-        alignment: Alignment.center,
-         children: [
-          Container(
+          child: Container(
             alignment: Alignment.center,
             width: 350,
             height: 150,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              // image: DecorationImage(
-              //     image: AssetImage("images/image lession/03.jpg"),
-              //     fit: BoxFit.cover
-              // ),
+              color: Colors.cyan[100],
+              borderRadius: BorderRadius.circular(10)
             ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                    width: 100,
+                    height: 100,
+                    child: Image.asset("images/image lession/exercise01.png")),
+                Container(
+                  child: Text("លំហាត់",style: TextStyle(fontSize: 30,color: Colors.white,fontFamily: "f1"),),
+                )
+              ],
+            ),
+
           ),
-           Container(
-             child: Text("លំហាត់",style: TextStyle(fontSize: 30,color: Colors.black,fontFamily: "f1"),),
-           )
-         ],
-        ),
       onTap: (){
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyExpression()));
       },
@@ -241,14 +242,14 @@ class _MyhomeState extends State<Myhome> {
           Container(
             alignment: Alignment.center,
             width: 350,
-            height: 200,
+            height: 150,
             decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                  image: AssetImage("images/image lession/04.jpg"),
-                  fit: BoxFit.cover
-              ),
+              // image: DecorationImage(
+              //     image: AssetImage("images/image lession/04.jpg"),
+              //     fit: BoxFit.cover
+              // ),
             ),
           ),
           Container(
@@ -269,14 +270,14 @@ class _MyhomeState extends State<Myhome> {
           Container(
             alignment: Alignment.center,
             width: 350,
-            height: 200,
+            height: 150,
             decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                  image: AssetImage("images/image lession/05.jpg"),
-                  fit: BoxFit.cover
-              ),
+              // image: DecorationImage(
+              //     image: AssetImage("images/image lession/05.jpg"),
+              //     fit: BoxFit.cover
+              // ),
             ),
           ),
           Container(

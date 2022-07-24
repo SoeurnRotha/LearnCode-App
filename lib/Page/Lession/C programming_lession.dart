@@ -32,7 +32,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
           children: [
             SizedBox(height: 10,),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 1"),
+              child:  _buildItems("images/file/cpro.png","មាតិកា"),
               onTap: () async{
                 final url1 = "C programming.pdf";
                 final file1 = await PDFApi.loadFirebase(url1);
@@ -42,7 +42,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 2"),
+              child:  _buildItems("images/file/cpro.png","មេរៀនទី០១: សេចក្តីផ្តើមនៃភាសាC"),
               onTap: ()async{
                 final url2 = "Getting C programming.pdf";
                 final file2 = await PDFApi.loadFirebase(url2);
@@ -51,7 +51,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 3"),
+              child:  _buildItems("images/file/cpro.png","មេរៀនទី០២: Datatype & Operators"),
               onTap: ()async{
                 final url3 = "Lession Datatype and Oerators.pdf";
                 final file3 = await PDFApi.loadFirebase(url3);
@@ -60,16 +60,16 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 4"),
+              child:  _buildItems("images/file/cpro.png","មេរៀនទី០៣: Condition & Loop"),
               onTap: ()async{
-                final url4 = "Lession Condition and loop.pdf";
+                final url4 = "Lesson Condition and loop.pdf";
                 final file4 = await PDFApi.loadFirebase(url4);
                 if(file4 == null) return;
                 openPDF(context, file4);
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 5"),
+              child:  _buildItems("images/file/cpro.png","Lesson 5"),
               onTap: ()async{
                 final url5 = "Lession Array.pdf";
                 final file5 = await PDFApi.loadFirebase(url5);
@@ -78,7 +78,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 6"),
+              child:  _buildItems("images/file/cpro.png","Lesson 6"),
               onTap: ()async{
                 final url6 = "Lession Function.pdf";
                 final file6 = await PDFApi.loadFirebase(url6);
@@ -87,7 +87,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 7"),
+              child:  _buildItems("images/file/cpro.png","Lesson 7"),
               onTap: ()async{
                 final url7 = "Lession Pointers.pdf";
                 final file7 = await PDFApi.loadFirebase(url7);
@@ -96,7 +96,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 8"),
+              child:  _buildItems("images/file/cpro.png","Lesson 8"),
               onTap: ()async{
                 final url8 = "Lession String.pdf";
                 final file8 = await PDFApi.loadFirebase(url8);
@@ -105,7 +105,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 9"),
+              child:  _buildItems("images/file/cpro.png","Lesson 9"),
               onTap: ()async{
                 final url9 = "Lession Structure.pdf";
                 final file9 = await PDFApi.loadFirebase(url9);
@@ -114,7 +114,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
               },
             ),
             InkWell(
-              child:  _buildItems("images/file/cpro.png","Lession 10"),
+              child:  _buildItems("images/file/cpro.png","Lesson 10"),
               onTap: ()async{
                 final url10 = "Lession File i.pdf";
                 final file10 = await PDFApi.loadFirebase(url10);
@@ -143,7 +143,7 @@ class _pdfCprogrammingState extends State<pdfCprogramming> {
         alignment: Alignment.center,
         height: 80,
         child: ListTile(
-          leading: Image.asset(image,width: 80,height: 80,),
+          leading: Image.asset(image,width: 70,height: 70,),
           title: Text(title,style: TextStyle(fontSize: 16),),
 
         ),

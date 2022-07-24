@@ -70,7 +70,7 @@ class _PageAboutUsState extends State<PageAboutUs> {
     child: Padding(
     padding: const EdgeInsets.all(8.0),
     child:
-    Center(child: Text("គោលបំណងក្នុងការបង្កើតកម្មវិធីនេះឡើងគឺដើម្បីចែករំលែកនៅចំណេះដឹងផ្នែកព័័ត៌មានវិទ្យា(Information Technology)ដែលពួកយើងមាន ដើម្បីជួយសម្រួលដល់សិស្សានុសិស្សដែលកំពុងសិក្សាឬមានបំណងចង់សិក្សាខាងផ្នែកព័ត៌មានវិទ្យានេះ។",style: TextStyle(fontFamily: "k1",fontSize: 15,fontWeight: FontWeight.bold),)
+    Center(child: Text("គោលបំណងក្នុងការបង្កើតកម្មវិធីនេះឡើងគឺដើម្បីចែករំលែកនៅចំណេះដឹងផ្នែកព័័ត៌មានវិទ្យា(Information Technology)ដែលពួកយើងមាន ដើម្បីជួយសម្រួលដល់សិស្សានុសិស្សដែលកំពុងសិក្សាឬមានបំណងចង់សិក្សាខាងផ្នែកព័ត៌មានវិទ្យានេះ។",style: TextStyle(fontSize: 15),)
     ),
     ),
     ),
@@ -125,8 +125,8 @@ class _PageAboutUsState extends State<PageAboutUs> {
       children: [
         Container(
           margin: EdgeInsets.only(left: 20),
-          width: 80,
-          height: 80,
+          width: 60,
+          height: 60,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
@@ -136,11 +136,18 @@ class _PageAboutUsState extends State<PageAboutUs> {
           ),
         ),
         SizedBox(width: 20,),
-        Text("002 167 474",style: TextStyle(fontWeight: FontWeight.bold,fontFamily: "f1",fontSize: 18),)
+        Text("002 167 474",style: TextStyle(fontSize: 18),)
       ],
     ),
     Container(
       child: Column(
+        // Row(
+        //   children: [
+        //     Container(
+        //       child: Image.asset("images/aba/aba logo.png"),
+        //     ),
+        //   ],
+        // ),
         children: [
           Row(
             children: [
@@ -176,7 +183,7 @@ class _PageAboutUsState extends State<PageAboutUs> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 40,
+        height: 30,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
               // bottomRight: Radius.circular(30),
@@ -198,7 +205,7 @@ class _PageAboutUsState extends State<PageAboutUs> {
               )
             ]
         ),
-        child: Center(child: Text("Copyright by LearnCode",style: TextStyle(fontSize: 18,color: Colors.red,fontFamily: "f1"),)),
+        child: Center(child: Text("Copyright by LearnCode",style: TextStyle(fontSize: 12,color: Colors.red,fontFamily: "f1"),)),
       ),
     )
   ],
